@@ -1,0 +1,465 @@
+{
+  "defaultLanguage": "fr",
+  "languages": [
+    "fr",
+    "en",
+    "ar"
+  ],
+  "seo": {
+    "title": "Le Petit Pont | Restaurant Gastronomique Paris 5ème (75005)",
+    "description": "Découvrez Le Petit Pont à Paris 5ème (75005). Restaurant raffiné offrant service sur place, vente à emporter et réservations de groupe dans une ambiance chaleureuse.",
+    "keywords": [
+      "Restaurant Paris 5",
+      "Le Petit Pont Paris",
+      "Restaurant 75005",
+      "Gastronomie Paris",
+      "Réservation restaurant Paris"
+    ]
+  },
+  "content": {
+    "fr": {
+      "metaTitle": "Le Petit Pont | Restaurant Gastronomique Paris 5ème (75005)",
+      "metaDescription": "Découvrez Le Petit Pont à Paris 5ème (75005). Restaurant raffiné offrant service sur place, vente à emporter et réservations de groupe dans une ambiance chaleureuse.",
+      "nav": {
+        "about": "A propos",
+        "services": "Services",
+        "gallery": "Galerie",
+        "reviews": "Avis",
+        "contact": "Contact"
+      },
+      "hero": {
+        "eyebrow": "Maison Gourmande",
+        "title": "Le Petit Pont",
+        "subtitle": "Gastronomie raffinée & instants chaleureux au cœur du 5ème",
+        "description": "Une cuisine généreuse et inspirée, servie dans une atmosphère élégante et intimiste. Venez savourer une expérience culinaire unique à deux pas de la Seine.",
+        "primaryCta": "Contacter sur WhatsApp",
+        "secondaryCta": "Voir les services"
+      },
+      "about": {
+        "eyebrow": "A propos",
+        "title": "Notre Philosophie",
+        "body": "Ancré dans le charme historique du 5ème arrondissement de Paris, Le Petit Pont célèbre le goût, la convivialité et l'élégance de la table. Nous sélectionnons des produits d'exception pour vous offrir une parenthèse gourmande inoubliable, que ce soit pour un déjeuner chaleureux ou un dîner feutré."
+      },
+      "services": {
+        "eyebrow": "Services",
+        "title": "Nos Prestations",
+        "intro": "Des attentions délicates et des formules adaptées à chaque moment de gourmandise.",
+        "items": [
+          {
+            "title": "Service sur place",
+            "description": "Une immersion sensorielle au sein de notre salle chaleureuse avec un service attentionné et personnalisé."
+          },
+          {
+            "title": "Vente à emporter",
+            "description": "Emportez l'excellence de notre carte chez vous grâce à des emballages soignés préservant toutes les saveurs."
+          },
+          {
+            "title": "Réservations locales",
+            "description": "Assurez-vous une table privilégiée pour vos rendez-vous intimes ou vos déjeuners d'affaires."
+          },
+          {
+            "title": "Commandes pour groupes",
+            "description": "Des menus sur-mesure et un accueil dédié pour célébrer vos événements privés ou professionnels."
+          }
+        ]
+      },
+      "highlights": {
+        "eyebrow": "Points forts",
+        "title": "L'Excellence au Quotidien",
+        "items": [
+          {
+            "title": "Présentation Soignée",
+            "description": "Des assiettes dressées avec précision pour le plaisir des yeux autant que du palais."
+          },
+          {
+            "title": "Contact Direct",
+            "description": "Une équipe réactive et joignable facilement pour répondre à toutes vos demandes particulières."
+          },
+          {
+            "title": "Ancrage Local",
+            "description": "Une adresse incontournable du quartier, prisée pour sa régularité et son accueil authentique."
+          }
+        ]
+      },
+      "gallery": {
+        "eyebrow": "Galerie",
+        "title": "Atmosphère & Créations",
+        "intro": "Un aperçu visuel de notre univers culinaire et de notre cadre élégant.",
+        "captions": [
+          "Dressage minutieux d'un plat signature préparé par notre chef",
+          "Ambiance feutrée et chaleureuse de notre salle principale",
+          "Le soin des détails lors du service en salle",
+          "Façade illuminée de la maison à l'heure du coucher de soleil"
+        ]
+      },
+      "reviews": {
+        "eyebrow": "Reputation",
+        "title": "L'Avis de nos Convives",
+        "summary": "Une réputation bâtie sur la régularité de nos assiettes et la chaleur de notre accueil."
+      },
+      "contact": {
+        "eyebrow": "Contact",
+        "title": "Nous Trouver & Réserver",
+        "intro": "Nous sommes ravis de vous accueillir dans le 5ème arrondissement de Paris."
+      },
+      "form": {
+        "title": "Envoyez-nous un Message",
+        "intro": "Pour toute réservation spéciale ou demande de groupe, écrivez-nous directement via WhatsApp."
+      },
+      "faq": {
+        "eyebrow": "FAQ",
+        "title": "Questions Fréquentes",
+        "items": [
+          {
+            "question": "Où se situe exactement le restaurant ?",
+            "answer": "Le Petit Pont est idéalement situé dans le 5ème arrondissement de Paris (75005), accessible facilement au cœur du quartier historique."
+          },
+          {
+            "question": "Comment puis-je réserver une table ou passer commande ?",
+            "answer": "Vous pouvez nous contacter directement par téléphone ou nous envoyer un message instantané via WhatsApp."
+          },
+          {
+            "question": "Proposez-vous des repas pour les groupes ?",
+            "answer": "Oui, nous organisons des réceptions de groupe avec des formules adaptées. Contactez-nous à l'avance pour personnaliser votre accueil."
+          },
+          {
+            "question": "Peut-on commander des plats à emporter ?",
+            "answer": "Absolument, l'ensemble de nos formules est disponible en vente à emporter sur simple demande."
+          }
+        ]
+      },
+      "footer": {
+        "tagline": "Le Petit Pont — Élégance gourmande et art de recevoir à Paris."
+      },
+      "ui": {
+        "navAbout": "A propos",
+        "navServices": "Services",
+        "navGallery": "Galerie",
+        "navReviews": "Avis",
+        "navContact": "Contact",
+        "languageLabel": "Langue",
+        "addressLabel": "Adresse",
+        "phoneLabel": "Telephone",
+        "emailLabel": "Email",
+        "hoursLabel": "Horaires",
+        "ratingLabel": "Note",
+        "openMap": "Ouvrir la carte",
+        "whatsAppLabel": "WhatsApp",
+        "formNameLabel": "Nom",
+        "formPhoneLabel": "Telephone",
+        "formMessageLabel": "Message",
+        "formSubmitLabel": "Envoyer sur WhatsApp",
+        "formNamePlaceholder": "Votre nom",
+        "formPhonePlaceholder": "Votre numero",
+        "formMessagePlaceholder": "Bonjour, je souhaite obtenir plus d informations sur vos services.",
+        "noHours": "Horaires communiques sur demande",
+        "galleryBadge": "Photos",
+        "featureBadge": "Atouts",
+        "reviewBadge": "Confiance",
+        "contactBadge": "Disponible",
+        "faqBadge": "Questions",
+        "viewOnMaps": "Voir sur Google Maps",
+        "viewReviews": "Voir les avis Google",
+        "writeReview": "Laisser un avis",
+        "callNow": "Appeler maintenant",
+        "sendOnWhatsapp": "Demarrer sur WhatsApp"
+      }
+    },
+    "en": {
+      "metaTitle": "Le Petit Pont | Restaurant Gastronomique Paris 5ème (75005)",
+      "metaDescription": "Découvrez Le Petit Pont à Paris 5ème (75005). Restaurant raffiné offrant service sur place, vente à emporter et réservations de groupe dans une ambiance chaleureuse.",
+      "nav": {
+        "about": "About",
+        "services": "Services",
+        "gallery": "Gallery",
+        "reviews": "Reviews",
+        "contact": "Contact"
+      },
+      "hero": {
+        "eyebrow": "Gourmet House",
+        "title": "Le Petit Pont",
+        "subtitle": "Refined gastronomy & warm moments in the heart of the 5th",
+        "description": "Generous and inspired cuisine served in an elegant, intimate setting. Enjoy a unique culinary experience just steps away from the Seine.",
+        "primaryCta": "Contact on WhatsApp",
+        "secondaryCta": "View services"
+      },
+      "about": {
+        "eyebrow": "About",
+        "title": "Our Philosophy",
+        "body": "Rooted in the historic charm of Paris's 5th arrondissement, Le Petit Pont celebrates flavor, conviviality, and fine dining. We select exceptional ingredients to offer you an unforgettable culinary escape, whether for a casual lunch or a cozy dinner."
+      },
+      "services": {
+        "eyebrow": "Services",
+        "title": "Our Services",
+        "intro": "Tailored culinary experiences designed for every gourmet occasion.",
+        "items": [
+          {
+            "title": "Dine-in Experience",
+            "description": "An immersive dining experience in our warm room with attentive and personalized service."
+          },
+          {
+            "title": "Takeaway Service",
+            "description": "Enjoy our signature cuisine at home with carefully crafted takeaway packaging."
+          },
+          {
+            "title": "Local Reservations",
+            "description": "Secure your table easily for intimate dinners, family gatherings, or business lunches."
+          },
+          {
+            "title": "Group Bookings",
+            "description": "Custom menus and dedicated hospitality for your private or corporate events."
+          }
+        ]
+      },
+      "highlights": {
+        "eyebrow": "Highlights",
+        "title": "Daily Excellence",
+        "items": [
+          {
+            "title": "Artful Plating",
+            "description": "Beautifully presented dishes crafted to delight both your eyes and palate."
+          },
+          {
+            "title": "Direct Contact",
+            "description": "A responsive team easily reachable for all your special requests and reservations."
+          },
+          {
+            "title": "Local Heritage",
+            "description": "A beloved neighborhood spot cherished for its consistency and authentic hospitality."
+          }
+        ]
+      },
+      "gallery": {
+        "eyebrow": "Gallery",
+        "title": "Atmosphere & Creations",
+        "intro": "A visual taste of our culinary universe and welcoming ambiance.",
+        "captions": [
+          "Meticulous plating of a signature dish by our chef",
+          "Warm and refined atmosphere in our main dining room",
+          "Attention to detail during table service",
+          "Golden hour glow on our charming restaurant facade"
+        ]
+      },
+      "reviews": {
+        "eyebrow": "Reputation",
+        "title": "Guest Reviews",
+        "summary": "A reputation built on consistent quality and genuine French hospitality."
+      },
+      "contact": {
+        "eyebrow": "Contact",
+        "title": "Visit & Reserve",
+        "intro": "We look forward to welcoming you in the historic 5th arrondissement of Paris."
+      },
+      "form": {
+        "title": "Send Us a Message",
+        "intro": "For special booking inquiries or group reservations, message us directly via WhatsApp."
+      },
+      "faq": {
+        "eyebrow": "FAQ",
+        "title": "Frequently Asked Questions",
+        "items": [
+          {
+            "question": "Where is the restaurant located?",
+            "answer": "Le Petit Pont is conveniently located in the 5th arrondissement of Paris (75005), in the heart of the historic district."
+          },
+          {
+            "question": "How can I reserve a table or order takeaway?",
+            "answer": "You can reach us directly by phone or send us a quick message via WhatsApp."
+          },
+          {
+            "question": "Do you accommodate group bookings?",
+            "answer": "Yes, we welcome group events with customized menus. Please contact us in advance to plan your gathering."
+          },
+          {
+            "question": "Is takeaway available daily?",
+            "answer": "Yes, our takeaway service allows you to enjoy our signature dishes wherever you are."
+          }
+        ]
+      },
+      "footer": {
+        "tagline": "Le Petit Pont — Refined dining and warm hospitality in Paris."
+      },
+      "ui": {
+        "navAbout": "About",
+        "navServices": "Services",
+        "navGallery": "Gallery",
+        "navReviews": "Reviews",
+        "navContact": "Contact",
+        "languageLabel": "Language",
+        "addressLabel": "Address",
+        "phoneLabel": "Phone",
+        "emailLabel": "Email",
+        "hoursLabel": "Hours",
+        "ratingLabel": "Rating",
+        "openMap": "Open map",
+        "whatsAppLabel": "WhatsApp",
+        "formNameLabel": "Name",
+        "formPhoneLabel": "Phone",
+        "formMessageLabel": "Message",
+        "formSubmitLabel": "Send on WhatsApp",
+        "formNamePlaceholder": "Your name",
+        "formPhonePlaceholder": "Your phone number",
+        "formMessagePlaceholder": "Hello, I would like more information about your services.",
+        "noHours": "Hours available on request",
+        "galleryBadge": "Photos",
+        "featureBadge": "Highlights",
+        "reviewBadge": "Trust",
+        "contactBadge": "Available",
+        "faqBadge": "FAQ",
+        "viewOnMaps": "View on Google Maps",
+        "viewReviews": "Read Google reviews",
+        "writeReview": "Leave a review",
+        "callNow": "Call now",
+        "sendOnWhatsapp": "Start on WhatsApp"
+      }
+    },
+    "ar": {
+      "metaTitle": "Le Petit Pont | Restaurant Gastronomique Paris 5ème (75005)",
+      "metaDescription": "Découvrez Le Petit Pont à Paris 5ème (75005). Restaurant raffiné offrant service sur place, vente à emporter et réservations de groupe dans une ambiance chaleureuse.",
+      "nav": {
+        "about": "من نحن",
+        "services": "الخدمات",
+        "gallery": "المعرض",
+        "reviews": "التقييم",
+        "contact": "تواصل"
+      },
+      "hero": {
+        "eyebrow": "مطعم راقي",
+        "title": "Le Petit Pont",
+        "subtitle": "مذاق رفيع وأجواء دافئة في قلب الدائرة الخامسة",
+        "description": "أطباق مبتكرة وسخية تُقدَّم في أجواء أنيقة ودافئة. استمتع بتجربة طهي استثنائية على بعد خطوات من نهر السين.",
+        "primaryCta": "تواصل عبر واتساب",
+        "secondaryCta": "عرض الخدمات"
+      },
+      "about": {
+        "eyebrow": "من نحن",
+        "title": "رؤيتنا",
+        "body": "في قلب السحر التاريخي للدائرة الخامسة في باريس، يحتفي مطعم Le Petit Pont بالذوق المتميز وحسن الضيافة. نختار أفضل المكونات لنقدم لكم تجربة طعام لا تُنسى، سواء لوجبة غداء دافئة أو عشاء هادئ."
+      },
+      "services": {
+        "eyebrow": "الخدمات",
+        "title": "خدماتنا",
+        "intro": "تجارب طعام مصممة بعناية لتناسب جميع مناسباتكم.",
+        "items": [
+          {
+            "title": "خدمة في المطعم",
+            "description": "تجربة مميزة داخل قاعتنا الدافئة مع خدمة شخصية وراقية."
+          },
+          {
+            "title": "وجبات سفري",
+            "description": "استمتع بأطباقنا المميزة في منزلكم مع تغليف متقن يحافظ على جودة النكهات."
+          },
+          {
+            "title": "حجز الطاولات",
+            "description": "احجز طاولتك بسهولة للقاءاتك الخاصة أو وجبات العمل."
+          },
+          {
+            "title": "طلبات المجموعات",
+            "description": "قوائم طعام مخصصة واستقبال دافئ لمناسباتكم الخاصة أو المهنية."
+          }
+        ]
+      },
+      "highlights": {
+        "eyebrow": "نقاط القوة",
+        "title": "التميز اليومي",
+        "items": [
+          {
+            "title": "تقديم متقن",
+            "description": "أطباق مزينة بعناية تامة لتسعد العين قبل المذاق."
+          },
+          {
+            "title": "تواصل مباشر",
+            "description": "فريق عمل متجاوب وسهل الوصول لتلبية كافة طلباتكم."
+          },
+          {
+            "title": "حضور محلي مميز",
+            "description": "عنوان محلي محبوب معروف بجودته المستمرة واستقباله الأصيل."
+          }
+        ]
+      },
+      "gallery": {
+        "eyebrow": "المعرض",
+        "title": "الأجواء والابتكارات",
+        "intro": "لمحة بصرية عن عالمنا الغذائي وأجوائنا الراقية.",
+        "captions": [
+          "لمسات شيف رئيسية أثناء تحضير الطبق الخاص",
+          "أجواء دافئة وأنيقة في صالة الطعام الرئيسية",
+          "العناية بأدق التفاصيل أثناء خدمة الطاولة",
+          "واجهة المطعم المتألقة خلال ساعات الغروب"
+        ]
+      },
+      "reviews": {
+        "eyebrow": "السمعة",
+        "title": "آراء ضيوفنا",
+        "summary": "سمعة طيبة بنيت على جودة أطباقنا ودفء استقبالنا."
+      },
+      "contact": {
+        "eyebrow": "تواصل",
+        "title": "الموقع والحجز",
+        "intro": "يسعدنا استقبالكم في الدائرة الخامسة بباريس."
+      },
+      "form": {
+        "title": "تواصل معنا",
+        "intro": "للحجوزات الخاصة أو طلبات المجموعات، راسلونا مباشرة عبر واتساب."
+      },
+      "faq": {
+        "eyebrow": "الأسئلة الشائعة",
+        "title": "الأسئلة الشائعة",
+        "items": [
+          {
+            "question": "أين يقع المطعم بالتحديد؟",
+            "answer": "يقع مطعم Le Petit Pont في الدائرة الخامسة في باريس (75005)، في موقع حيوي يسهل الوصول إليه."
+          },
+          {
+            "question": "كيف يمكنني حجز طاولة أو طلب وجبة سفري؟",
+            "answer": "يمكنكم الاتصال بنا مباشرة عبر الهاتف أو إرسال رسالة فورية عبر واتساب."
+          },
+          {
+            "question": "هل تستقبلون المجموعات والحفلات؟",
+            "answer": "نعم، نرحب بطلبات المجموعات ونقدم قوائم مخصصة. يرجى التواصل معنا مسبقاً للتنسيق."
+          },
+          {
+            "question": "هل تتوفر خدمة الوجبات السفري يومياً؟",
+            "answer": "نعم، تتوفر خدمة الطلب الخارجي لتستمتعوا بأطباقنا في أي مكان."
+          }
+        ]
+      },
+      "footer": {
+        "tagline": "Le Petit Pont — أناقة الطهي وفن الضيافة في باريس."
+      },
+      "ui": {
+        "navAbout": "من نحن",
+        "navServices": "الخدمات",
+        "navGallery": "المعرض",
+        "navReviews": "التقييم",
+        "navContact": "تواصل",
+        "languageLabel": "اللغة",
+        "addressLabel": "العنوان",
+        "phoneLabel": "الهاتف",
+        "emailLabel": "البريد",
+        "hoursLabel": "الأوقات",
+        "ratingLabel": "التقييم",
+        "openMap": "فتح الخريطة",
+        "whatsAppLabel": "واتساب",
+        "formNameLabel": "الاسم",
+        "formPhoneLabel": "الهاتف",
+        "formMessageLabel": "الرسالة",
+        "formSubmitLabel": "إرسال عبر واتساب",
+        "formNamePlaceholder": "اسمك",
+        "formPhonePlaceholder": "رقم الهاتف",
+        "formMessagePlaceholder": "مرحباً، أريد معرفة المزيد عن خدماتكم.",
+        "noHours": "ساعات العمل متاحة عند الطلب",
+        "galleryBadge": "صور",
+        "featureBadge": "المزايا",
+        "reviewBadge": "ثقة",
+        "contactBadge": "متاح",
+        "faqBadge": "الأسئلة",
+        "viewOnMaps": "عرض على خرائط Google",
+        "viewReviews": "عرض تقييمات Google",
+        "writeReview": "إضافة تقييم",
+        "callNow": "اتصل الآن",
+        "sendOnWhatsapp": "ابدأ عبر واتساب"
+      }
+    }
+  }
+}

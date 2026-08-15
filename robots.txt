@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://semahmrad.github.io/lead-radar-le-petit-pont-55612a4b/sitemap.xml
