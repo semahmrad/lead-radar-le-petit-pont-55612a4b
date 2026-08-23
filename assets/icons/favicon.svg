@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Le Petit Pont">
   <defs>
     <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#bb5b36" />
-      <stop offset="100%" stop-color="#81452d" />
+      <stop offset="0%" stop-color="#7a2331" />
+      <stop offset="100%" stop-color="#3c4a34" />
     </linearGradient>
   </defs>
-  <rect width="512" height="512" rx="140" fill="#f0e2d7" />
+  <rect width="512" height="512" rx="140" fill="#f1e9d8" />
   <rect x="36" y="36" width="440" height="440" rx="120" fill="url(#logoGradient)" />
-  <circle cx="256" cy="184" r="70" fill="#e8b172" opacity="0.18" />
-  <text x="256" y="290" text-anchor="middle" fill="#fff8f3" font-family="Arial, sans-serif" font-size="160" font-weight="800">LP</text>
-  <text x="256" y="372" text-anchor="middle" fill="#fff8f3" font-family="Arial, sans-serif" font-size="28" letter-spacing="6">RESTAURANT</text>
+  <circle cx="256" cy="184" r="70" fill="#c9a24b" opacity="0.18" />
+  <text x="256" y="290" text-anchor="middle" fill="#201c18" font-family="Arial, sans-serif" font-size="160" font-weight="800">LP</text>
+  <text x="256" y="372" text-anchor="middle" fill="#201c18" font-family="Arial, sans-serif" font-size="28" letter-spacing="6">RESTAURANT</text>
 </svg>

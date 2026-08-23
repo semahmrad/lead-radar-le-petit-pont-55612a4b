@@ -13,7 +13,7 @@ Static website generated for **Le Petit Pont**.
 ## Generation metadata
 
 - Template: Restaurant Signature
-- AI model used: Gemini Flash
+- AI model used: Local deterministic fallback
 - Public site URL: https://semahmrad.github.io/lead-radar-le-petit-pont-55612a4b/
 
 ## Deploy quickly

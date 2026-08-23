@@ -74,8 +74,9 @@ const refs = {
   welcomeSplash: document.getElementById('welcomeSplash'),
   welcomeContinueButton: document.getElementById('welcomeContinueButton'),
   welcomeCloseButton: document.getElementById('welcomeCloseButton'),
+  preloader: document.getElementById('preloader'),
   lightbox: document.getElementById('lightbox'),
-  lightboxImage: document.getElementById('lightboxImage'),
+  lightboxImage: document.getElementById('lightboxImage') || document.getElementById('lightboxImg'),
   lightboxCaption: document.getElementById('lightboxCaption'),
   lightboxClose: document.getElementById('lightboxClose'),
   galleryGrid: document.getElementById('galleryGrid'),
@@ -131,33 +132,39 @@ const renderCards = (container, items, className) => {
   const renderStyle = container.dataset.renderStyle || 'default';
 
   if (renderStyle === 'restaurant-menu') {
-    container.innerHTML = items
-      .map((item, index) => {
-        const galleryItem = getGalleryItem(index + 1) || getGalleryItem(index);
-        const imageHtml = galleryItem?.src
-          ? `
-            <img
-              src="${escapeAttribute(galleryItem.src)}"
-              alt="${escapeAttribute(`${siteConfig.businessName || 'Business'} - ${item.title || ''}`)}"
-              loading="lazy"
-            />
-          `
-          : '';
-
-        return `
-          <article class="menu-entry">
-            ${imageHtml}
-            <div class="menu-entry__body">
-              <div class="menu-entry__top">
-                <span class="menu-entry__index">${String(index + 1).padStart(2, '0')}</span>
-                <h3>${escapeHtml(item.title || '')}</h3>
-              </div>
-              <p>${escapeHtml(item.description || '')}</p>
-            </div>
-          </article>
-        `;
-      })
+    const labels = ['Sélection', 'Spécialités', 'Découvertes', 'Boissons'];
+    const groups = labels.map((_, groupIndex) => items.slice(0, 8).filter((__, index) => index % 4 === groupIndex));
+    const tabs = labels
+      .map((label, index) => `
+        <button class="menu-tab ${index === 0 ? 'active' : ''}" data-tab="menu-panel-${index + 1}" role="tab" aria-selected="${index === 0 ? 'true' : 'false'}" type="button">${label}</button>
+      `)
       .join('');
+    const panels = groups
+      .map((group, groupIndex) => `
+        <div class="menu-panel ${groupIndex === 0 ? 'active' : ''}" id="menu-panel-${groupIndex + 1}" role="tabpanel">
+          ${group.map((item) => {
+            const index = items.indexOf(item);
+            const galleryItem = getGalleryItem(index + 1) || getGalleryItem(index);
+            const imageHtml = galleryItem?.src
+              ? `<img src="${escapeAttribute(galleryItem.src)}" alt="${escapeAttribute(`${siteConfig.businessName || 'Business'} - ${item.title || ''}`)}" loading="lazy" />`
+              : '';
+            return `
+              <article class="menu-item">
+                ${imageHtml}
+                <div class="menu-item-info">
+                  <div class="menu-item-top">
+                    <h4>${escapeHtml(item.title || '')}</h4>
+                    <span class="price">${String(index + 1).padStart(2, '0')}</span>
+                  </div>
+                  <p>${escapeHtml(item.description || '')}</p>
+                </div>
+              </article>
+            `;
+          }).join('')}
+        </div>
+      `)
+      .join('');
+    container.innerHTML = `<div class="menu-tabs" role="tablist">${tabs}</div><div class="menu-panels">${panels}</div>`;
     return;
   }
 
@@ -293,7 +300,10 @@ const applyLanguage = (language) => {
   setText(refs.languageLabel, translation.ui.languageLabel);
 
   setText(refs.heroEyebrow, translation.hero.eyebrow);
-  setText(refs.heroTitle, translation.hero.title);
+  const isPrototypeTemplate = ['restaurant-signature', 'coffee-shop-signature'].includes(document.body.dataset.template || '');
+  if (!isPrototypeTemplate) {
+    setText(refs.heroTitle, translation.hero.title);
+  }
   setText(refs.heroSubtitle, translation.hero.subtitle);
   setText(refs.heroDescription, translation.hero.description);
   setText(refs.heroPrimaryCta, translation.hero.primaryCta);
@@ -319,7 +329,14 @@ const applyLanguage = (language) => {
 
   setText(refs.reviewsEyebrow, translation.reviews.eyebrow);
   setText(refs.reviewsTitle, translation.reviews.title);
-  setText(refs.reviewsSummary, translation.reviews.summary);
+  const ratingValue = Number(siteConfig.rating);
+  const reviewCount = Number(siteConfig.reviewCount);
+  const reviewFacts = [
+    translation.reviews.summary,
+    Number.isFinite(ratingValue) && ratingValue > 0 ? `${ratingValue.toFixed(1)}/5` : '',
+    Number.isFinite(reviewCount) && reviewCount > 0 ? `${reviewCount} avis Google` : '',
+  ].filter(Boolean);
+  setText(refs.reviewsSummary, reviewFacts.join(' · '));
 
   setText(refs.contactEyebrow, translation.contact.eyebrow);
   setText(refs.contactTitle, translation.contact.title);
@@ -402,9 +419,11 @@ const handleWhatsAppForm = () => {
 };
 
 const handleLightbox = () => {
-  if (!refs.galleryGrid || !refs.lightbox || !refs.lightboxImage || !refs.lightboxCaption) {
+  if (!refs.galleryGrid || !refs.lightbox || !refs.lightboxImage) {
     return;
   }
+
+  const usesHiddenAttribute = refs.lightbox.hasAttribute('hidden');
 
   refs.galleryGrid.addEventListener('click', (event) => {
     const figure = event.target instanceof HTMLElement
@@ -424,18 +443,64 @@ const handleLightbox = () => {
 
     refs.lightboxImage.src = image.src;
     refs.lightboxImage.alt = image.alt;
-    refs.lightboxCaption.textContent = caption?.textContent || '';
+    if (refs.lightboxCaption) {
+      refs.lightboxCaption.textContent = caption?.textContent || '';
+    }
     refs.lightbox.hidden = false;
+    refs.lightbox.classList.add('active');
+    refs.lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
   });
 
-  refs.lightboxClose?.addEventListener('click', () => {
-    refs.lightbox.hidden = true;
-  });
+  const closeLightbox = () => {
+    refs.lightbox.classList.remove('active');
+    refs.lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (usesHiddenAttribute) {
+      window.setTimeout(() => {
+        if (!refs.lightbox.classList.contains('active')) {
+          refs.lightbox.hidden = true;
+        }
+      }, 400);
+    }
+  };
+
+  refs.lightboxClose?.addEventListener('click', closeLightbox);
 
   refs.lightbox.addEventListener('click', (event) => {
     if (event.target === refs.lightbox) {
-      refs.lightbox.hidden = true;
+      closeLightbox();
     }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeLightbox();
+    }
+  });
+};
+
+const handleRestaurantMenuTabs = () => {
+  const tabs = [...document.querySelectorAll('.menu-tab')];
+  const panels = [...document.querySelectorAll('.menu-panel')];
+  if (tabs.length === 0 || panels.length === 0) {
+    return;
+  }
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      tabs.forEach((item) => {
+        item.classList.remove('active');
+        item.setAttribute('aria-selected', 'false');
+      });
+      panels.forEach((panel) => panel.classList.remove('active'));
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      const panelId = tab instanceof HTMLElement ? tab.dataset.tab : '';
+      if (panelId) {
+        document.getElementById(panelId)?.classList.add('active');
+      }
+    });
   });
 };
 
@@ -582,6 +647,11 @@ const handleNavigationToggle = () => {
 };
 
 const handleWelcomeSplash = () => {
+  if (!refs.welcomeSplash) {
+    document.body.dataset.splash = 'closed';
+    return;
+  }
+
   const params = new URLSearchParams(window.location.search);
   const shouldSkipSplash = params.get('preview') === '1' || params.get('preview') === 'true';
 
@@ -598,6 +668,20 @@ const handleWelcomeSplash = () => {
 
   refs.welcomeContinueButton?.addEventListener('click', closeSplash);
   refs.welcomeCloseButton?.addEventListener('click', closeSplash);
+};
+
+const handlePreloader = () => {
+  if (!refs.preloader) {
+    return;
+  }
+
+  const closePreloader = () => refs.preloader?.classList.add('hidden');
+  if (document.readyState === 'complete') {
+    window.setTimeout(closePreloader, 400);
+  } else {
+    window.addEventListener('load', () => window.setTimeout(closePreloader, 400), { once: true });
+  }
+  window.setTimeout(closePreloader, 2600);
 };
 
 const handleHeaderState = () => {
@@ -716,6 +800,8 @@ const escapeHtml = (value) =>
     .replaceAll("'", '&#39;');
 
 const init = async () => {
+  handlePreloader();
+
   try {
     const response = await fetch('assets/translations/i18n.json', { cache: 'no-store' });
     state.translations = await response.json();
@@ -734,11 +820,15 @@ const init = async () => {
   handleBackToTop();
   handleWhatsAppForm();
   handleLightbox();
+  handleRestaurantMenuTabs();
   handleCoffeeMenuFilters();
   handleCoffeeGalleryDrag();
   handleQuoteCarousel();
   handleScrollReveal();
   handleHeroMotion();
+  if (window.AOS) {
+    window.AOS.init({ duration: 800, once: true, offset: 80, easing: 'ease-out-cubic' });
+  }
   if (refs.year) {
     refs.year.textContent = String(new Date().getFullYear());
   }
