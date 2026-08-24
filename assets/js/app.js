@@ -299,7 +299,6 @@ const applyLanguage = (language) => {
   setText(refs.navContact, translation.nav.contact);
   setText(refs.languageLabel, translation.ui.languageLabel);
 
-  setText(refs.heroEyebrow, translation.hero.eyebrow);
   const isPrototypeTemplate = ['restaurant-signature', 'coffee-shop-signature'].includes(document.body.dataset.template || '');
   if (!isPrototypeTemplate) {
     setText(refs.heroTitle, translation.hero.title);
@@ -308,7 +307,9 @@ const applyLanguage = (language) => {
   setText(refs.heroDescription, translation.hero.description);
   setText(refs.heroPrimaryCta, translation.hero.primaryCta);
   setText(refs.heroSecondaryCta, translation.hero.secondaryCta);
-  setText(refs.heroRatingLabel, translation.ui.ratingLabel);
+  if (!isPrototypeTemplate) {
+    setText(refs.heroRatingLabel, translation.ui.ratingLabel);
+  }
   setText(refs.heroContactLabel, translation.ui.contactBadge);
   setText(refs.heroAddressLabel, translation.ui.addressLabel);
 
@@ -329,14 +330,6 @@ const applyLanguage = (language) => {
 
   setText(refs.reviewsEyebrow, translation.reviews.eyebrow);
   setText(refs.reviewsTitle, translation.reviews.title);
-  const ratingValue = Number(siteConfig.rating);
-  const reviewCount = Number(siteConfig.reviewCount);
-  const reviewFacts = [
-    translation.reviews.summary,
-    Number.isFinite(ratingValue) && ratingValue > 0 ? `${ratingValue.toFixed(1)}/5` : '',
-    Number.isFinite(reviewCount) && reviewCount > 0 ? `${reviewCount} avis Google` : '',
-  ].filter(Boolean);
-  setText(refs.reviewsSummary, reviewFacts.join(' · '));
 
   setText(refs.contactEyebrow, translation.contact.eyebrow);
   setText(refs.contactTitle, translation.contact.title);

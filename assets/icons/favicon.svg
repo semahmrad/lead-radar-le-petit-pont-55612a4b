@@ -1,13 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Le Petit Pont">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Logo Le Petit Pont">
+  <title>Le Petit Pont</title>
+  <desc>Identité visuelle originale créée pour Le Petit Pont</desc>
   <defs>
-    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#7a2331" />
-      <stop offset="100%" stop-color="#3c4a34" />
+    <linearGradient id="logoGradient" x1="8%" y1="5%" x2="92%" y2="96%">
+      <stop offset="0%" stop-color="#17324D" />
+      <stop offset="100%" stop-color="#375347" />
     </linearGradient>
+    <radialGradient id="logoGlow" cx="24%" cy="16%" r="86%">
+      <stop offset="0%" stop-color="#D29B5A" stop-opacity="0.34" />
+      <stop offset="100%" stop-color="#D29B5A" stop-opacity="0" />
+    </radialGradient>
+    <filter id="logoShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.26" />
+    </filter>
   </defs>
-  <rect width="512" height="512" rx="140" fill="#f1e9d8" />
-  <rect x="36" y="36" width="440" height="440" rx="120" fill="url(#logoGradient)" />
-  <circle cx="256" cy="184" r="70" fill="#c9a24b" opacity="0.18" />
-  <text x="256" y="290" text-anchor="middle" fill="#201c18" font-family="Arial, sans-serif" font-size="160" font-weight="800">LP</text>
-  <text x="256" y="372" text-anchor="middle" fill="#201c18" font-family="Arial, sans-serif" font-size="28" letter-spacing="6">RESTAURANT</text>
+  <rect width="512" height="512" rx="132" fill="#EAE1D1" />
+  <rect x="28" y="28" width="456" height="456" rx="116" fill="url(#logoGradient)" filter="url(#logoShadow)" />
+  <rect x="28" y="28" width="456" height="456" rx="116" fill="url(#logoGlow)" />
+  <circle cx="256" cy="256" r="181" fill="none" stroke="#D29B5A" stroke-width="3" opacity="0.76" />
+  <circle cx="256" cy="256" r="165" fill="#F8F3E9" opacity="0.97" />
+  <g transform="rotate(-8 256 160)" color="#D29B5A" fill="none" stroke="#D29B5A" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="256" cy="159" r="61" />
+<circle cx="256" cy="159" r="43" />
+<path d="M197 159h118M218 111v96M294 111v96" />
+  </g>
+  <path d="M174 256h164" stroke="#D29B5A" stroke-width="3" opacity="0.58" />
+  <text x="256" y="347" text-anchor="middle" fill="#17324D" font-family="Georgia, 'Times New Roman', serif" font-size="112" font-weight="700" letter-spacing="-5">LP</text>
+  <text x="256" y="400" text-anchor="middle" fill="#375347" font-family="Arial, sans-serif" font-size="21" font-weight="700" letter-spacing="7">RESTAURANT</text>
+  <circle cx="163" cy="396" r="4" fill="#D29B5A" />
+  <circle cx="349" cy="396" r="4" fill="#D29B5A" />
 </svg>
